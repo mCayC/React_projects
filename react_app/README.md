@@ -1,5 +1,6 @@
+React app created as practice <br />
 
-React app created as practice
+![img](https://user-images.githubusercontent.com/79923428/129369284-2a20393a-5fb0-4335-9e49-535902f45792.PNG)
 
 About: <br />
 Simple application made to play with React.js.
