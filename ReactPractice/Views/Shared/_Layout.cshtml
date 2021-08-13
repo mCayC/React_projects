@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/@ViewData["ProjectName"]/images/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/@ViewData["ProjectName"]/images/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/@ViewData["ProjectName"]/images/favicons/favicon-16x16.png">
+    <link rel="manifest" href="/@ViewData["ProjectName"]/images/favicons/manifest.json">
+    <link rel="mask-icon" href="/@ViewData["ProjectName"]/images/favicons/safari-pinned-tab.svg" color="#f2499d">
+    <meta name="theme-color" content="#f2499d">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <title>@ViewData["ProjectName"]</title>
+
+    <environment names="Development">
+        <script src="~/js/site.js" asp-append-version="true"></script>
+        <link rel="stylesheet" href="~/css/site.css"/>
+    </environment>
+    <environment names="Staging,Production">
+        <script src="~/js/site.min.js" asp-append-version="true" asp-fallback-src="~/js/site.js"></script>
+        <link rel="stylesheet" href="~/css/site.min.css"/>
+    </environment>
+
+</head>
+
+<body>
+    @Html.AntiForgeryToken()
+    <div class="wrap">
+        <main class="main">
+            <div class="main__inner">
+                <div class="container">
+                    @RenderBody()
+                </div>
+            </div>
+        </main>
+    </div>
+    @RenderSection("scripts", required: false)
+</body>
+</html>
